@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+
+string input;
+
+@ main
+    @ ~ $ <test>
+        @ ~ $ * /[0-9]+/
+        cout << "you input number" << endl;
+        @ endarg
+        @ ~ $ * /.*/
+        cout << "not a number" << endl;
+        @ endarg
+    @ endarg
+@ endmain
