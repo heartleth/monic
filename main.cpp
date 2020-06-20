@@ -150,10 +150,11 @@ bool m_match(std::string a, std::string regex) {
 				}
 				fprintf(wf, ") {\n");
 				while (!q.empty()) {
-					fprintf(wf, "string %s(argv[%d]);\n", q.front().first.c_str(), q.front().second);
+					fprintf(wf, "std::string %s(argv[%d]);\n", q.front().first.c_str(), q.front().second);
 					q.pop();
 				}
 			}
+
 			if (patt[1] == "%") {
 				fprintf(wf, "if (true) {\nif (true ", patt.size() - 2);
 				queue<pair<string, int>> q;
